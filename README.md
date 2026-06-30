@@ -8,20 +8,18 @@ A SQL-based data analysis project on a Zepto-style e-commerce/grocery dataset. T
 
 ## 📋 Dataset / Schema
 
-The dataset is stored in a single table, `zepto`, representing product-level SKU data.
+The project uses a Zepto-style e-commerce dataset stored in a CSV file (`zepto.csv`). The data was imported into PostgreSQL for exploration, cleaning, and business analysis.
 
-| Column                 | Type         | Description                        |
-| ---------------------- | ------------ | ---------------------------------- |
-| sku_id                 | SERIAL (PK)  | Unique identifier for each SKU     |
-| category               | VARCHAR(120) | Product category                   |
-| name                   | VARCHAR(150) | Product name                       |
-| mrp                    | NUMERIC(8,2) | Maximum retail price               |
-| discountPercent        | NUMERIC(5,2) | Discount percentage on MRP         |
-| availableQuantity      | INTEGER      | Quantity available in stock        |
-| discountedSellingPrice | NUMERIC(8,2) | Final selling price after discount |
-| weightInGms            | INTEGER      | Product weight in grams            |
-| outOfStock             | BOOLEAN      | Stock status                       |
-| quantity               | INTEGER      | Order/package quantity             |
+The dataset contains product-level SKU information, including:
+
+* Product category
+* Product name
+* MRP and discounted price
+* Discount percentage
+* Available quantity
+* Product weight
+* Stock status
+* Package quantity
 
 ## 🔄 Project Workflow
 
@@ -71,9 +69,11 @@ The `zepto` table is created (dropping any existing one) with the schema above.
 ## 📁 File Structure
 
 ```text
-├── zepto_analysis.sql   # All SQL queries (table creation, cleaning, analysis)
+├── zepto_v2.csv            # Dataset file
+├── zepto_analysis.sql   # SQL queries for data exploration, cleaning, and analysis
 └── README.md            # Project documentation
 ```
+
 
 ## 👨‍💻 Author
 
